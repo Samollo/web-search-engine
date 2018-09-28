@@ -1,0 +1,64 @@
+README/JOURNAL DE BORD
+
+16/02:
+
+Idées de format pour l'index: sql, texte, arbres
+Nous pensons utiliser un fichier txt, ce format nous paraît être un bon choix mais on n'écarte pas le SQL. Nous avons créé l'index, dans lequel on introduira le mot, son url suivi du nombre d'occurences de ce mot dans cet url.
+
+01/03:
+
+Pour le parser, on utilisera le langage Python, qui nous paraît être la méthode la plus judicieuse. 
+
+https://docs.python.org/2/library/htmlparser.html
+
+15/03:
+
+On a commencé à se renseigner pour le crawler, notamment sur la libraire libcurl. 
+
+01/04:
+
+Parser commencé
+
+12/04: 
+
+Crawler commencé
+
+26/04:
+
+Post du crawler, non terminé
+Hésitation pour le parser: livxml ou beautifulsoup???
+
+26/04:
+
+Second commit, crawler qui fonctionne!
+
+01/05:
+
+Pour le parser nous avons finalement choisi beautifulsoup, afin de suivre le dicton «make it work, make it fast, make it clean», ce choix nous paraît être le plus intelligent.
+
+Petit récap:
+
+- le crawler télécharge une page, 
+- indexe un mot et des urls où il apparait avec sa fréquence
+- récupère le titre de la page et les URLs présentes
+
+Setback parser au niveau de l’extraction des mots de la page html, on arrive à strip le texte des balises mais problème au niveau de la récupération mot par mot (on compte les mettre dans une liste)pour pouvoir les passer au crawler… le but étant de pouvoir effectuer l’indexation, la fréquence etc.
+
+06/05:
+
+Petite précision: un des membres du trinôme ne nous donne plus de nouvelles depuis le 09/03/2017 (nous avions envoyé un e-mail au chargé de la matière fin mars)
+
+08/05:
+
+-Après des aventures au pays des Segfault, le Crawler est fonctionnel ainsi que le parser. Les principaux problèmes étaient dû aux User-Agent, certificats de sites HTTPS et traitement de page déjà visitées.
+-Le launcher, qui recevra les requêtes de l'utilisateur est en cours. Actuellement capable de rechercher 1 mot et de renvoyer le tableau trié des URLs selon l'occurence.
+-Problème : Des soucis quant à la gestion de mémoire apparaissent lorsqu'on lancer launcher. Les résultats affichés sont parfois incompréhensible.
+-A faire : Recevoir une requête de l'utilisateur / Faire tourner le programme en continu / Gérer les requêtes contenants + de 1 mot
+
+09/05:
+
+Graphes ok: commande dot -Tpdf -O sitemap.dot 
+
+UPDATE 09/05:
+
+fichiers à jour! avec Makefile fonctionnel, les fichiers .h et les anciens fichiers à jours et complets comme demandés
