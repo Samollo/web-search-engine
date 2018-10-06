@@ -1,5 +1,5 @@
 # web-search-engine
-Web Search Engine using C and Python.
+Web Search Engine using C and Python. (Wrote in 2016)
 
 
 # INSTALLATION & CONFIGURATION
@@ -12,4 +12,13 @@ or
 sudo apt-get install libcurl4-nss-dev
 ```
 
-Work in progress...
+# RUN
+First, you need to crawl some web page with this command:
+```
+make crawler
+```
+then you can run the search engine with:
+```
+make launcher
+```
+N.B: At the moment, user doesn't have a lot of control on which pages to crawl. It may change in the futur.
