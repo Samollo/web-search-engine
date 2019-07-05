@@ -1,5 +1,6 @@
 # web-search-engine
-Web Search Engine using C and Python. (Wrote in 2016)
+Web Search Engine using C and Python. 2016.
+Authors: Samy Metadjer & Mohammed Ansari
 
 
 # INSTALLATION & CONFIGURATION
